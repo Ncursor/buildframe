@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "BuildFrame",
   "tree": {
     "$className": "DataModel",
     "ReplicatedStorage": {
