@@ -10,6 +10,9 @@ Players.PlayerAdded:Connect(function(player)
         local Command = message:split("/")
         for n,c in Commandlist do
             if table.find(c.Aliases,Command) then
+                if c.Permission < player.PermissionRank.Value then
+                    return
+                end
                 table.remove(Command,1)
                 c.Function(player,Command)
             end
