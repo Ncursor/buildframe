@@ -11,10 +11,10 @@ local offColor = BrickColor.new("Bright red")
 local onColor = BrickColor.new("Dark green")
 
 local function onInputChanged()
-	local input1 = gates.Input1
-	local input2 = gates.Input2
-	local output = gates.Output
-	
+	local input1:CustomEventReceiver = gates.Input1
+	local input2:CustomEventReceiver = gates.Input2
+	local output:CustomEvent = gates.Output
+
 	if input1.Value > .5 and input2.Value > .5 then
 		output.Light.BrickColor = onColor
 		output.Event:SetValue(1)
