@@ -37,7 +37,7 @@ function BFData:NewValuebase(Name:string)
 end
 
 function BFData:SetValue(Name:string,Data:any,Valuebase:string?)
-	if typeof(BF.Valuebases[Valuebase or "Global"].Value) ~= typeof(Data) then
+	if not typeof(BF.Valuebases[Valuebase or "Global"].Value) ~= typeof(Data) then
 		return
 	end
 	BF.Valuebases[Valuebase or "Global"].Value = Data
