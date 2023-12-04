@@ -36,4 +36,8 @@ function BFData:NewValuebase(Name:string)
 	Valuebase.Parent = BF.Valuebases
 end
 
+function BFData:SetValue(Name:string,Data:any,Valuebase:string?)
+	
+end
+
 return BFData
