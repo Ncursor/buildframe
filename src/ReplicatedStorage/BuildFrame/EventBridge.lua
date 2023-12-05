@@ -1,18 +1,33 @@
-export type GateEvent = {Inputs:{CustomEventReceiver},Outputs:{CustomEvent}}
+export type GateSignal = {Connect:(Enabled:boolean)->()}
+export type Input = {OnInput:RBXScriptSignal,Object:CustomEventReceiver}
+export type Output = {SendSignal:GateSignal,Object:CustomEvent}
+export type GateEvent = {Inputs:{Input},Output:Output}
 local EventBridge = {}
 
 function EventBridge:NewEvents(Gate:Part,InputCount:number,OutputCount:number)
     local GateEvent:GateEvent = {}
     for i = 1,InputCount do
-        if Gate[`Input{i}`] then
-            table.insert(GateEvent.Inputs,Gate[`Input{i}`])
+        local InputObject:CustomEventReceiver = Gate:FindFirstChild(`Input{i}`)
+        if InputObject then
+            table.insert(GateEvent.Inputs[i].Object,InputObject)
+            table.insert(GateEvent.Inputs[i].OnInput,InputObject.SourceValueChanged)
+        else
+            error(`Gate "{Gate.Name}" Missing Input`)
         end
     end
-    for i = 1,OutputCount do
-        if Gate[`Output{i}`] then
-            table.insert(GateEvent.Outputs,Gate[`Output{i}`])
+    if Gate:FindFirstChild(`Output`) then
+        GateEvent.Output.Object = Gate:FindFirstChild(`Output`)
+        GateEvent.Output.SendSignal = function(Enabled:boolean)
+            if Enabled then
+                GateEvent.Output.Object:SetValue(1)
+            else
+                GateEvent.Output.Object:SetValue(0)
+            end
         end
+    else
+        error(`Gate "{Gate.Name}" Missing Output`)
     end
+    return GateEvent
 end
 
 return EventBridge
