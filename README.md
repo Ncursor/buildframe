@@ -15,9 +15,9 @@ A versatile Build Island modding API created by newhoachiii
 |Custom Permission |🔨|
 |Custom Config tool|❌|
 
-✔️Done <br>
-🔨WIP <br>
-❌Planned <br>
+✔️Done </br>
+🔨WIP </br>
+❌Planned </br>
 
 ## Credits
 
