@@ -2,7 +2,12 @@
 A versatile Build Island modding API created by newhoachiii
 
 ## Planned features:
-- Datastore(complete)
-- Command API(WIP)
-- Custom Permission(WIP)
-- Custom Config tool(WIP)
+|Features          |Completeness|
+|------------------|:----------:|
+|Datastore         |✔️|
+|Command API       |🔨|
+|Custom Permission |🔨|
+|Custom Config tool|✖️|
+
+## Credits
+-
