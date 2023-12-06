@@ -22,4 +22,7 @@ A versatile Build Island modding API created by newhoachiii
 
 ## Credits
 
--
+- ### newhoachiii
+  Creator and Documentor
+- ### plexityvoid
+  Helper and Build Island Jr. Developer
