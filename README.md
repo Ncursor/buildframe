@@ -11,11 +11,12 @@ A versatile Build Island modding API created by newhoachiii
 |Features          |Completeness|
 |------------------|:----------:|
 |Datastore         |✔️|
+|Mod Setup         |✔️|
 |Command API       |🔨|
-|Custom Permission |🔨|
+|Custom Permission |❌|
 |Custom Config tool|❌|
 
-✔️Done </br>
+✔️Done(might need some finishing touches) </br>
 🔨WIP </br>
 ❌Planned </br>
 
