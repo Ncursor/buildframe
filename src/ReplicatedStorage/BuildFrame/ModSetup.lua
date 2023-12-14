@@ -21,19 +21,15 @@ local function NewWithTable(Name:string,mymod:ModuleScript)
     return ModInstance
 end
 function ModSetup:New(Name,Description,Credit,Version)
-    local ModInstance:ModInstance
+    local ModInstance
     if Description or Version or Credit then
-    ModInstance = {Name = Name,Description = Description,Version = Version,Credit = Credit}
+    ModInstance = setmetatable({Name = Name,Description = Description,Version = Version,Credit = Credit},MetaTemplate)
     else
     ModInstance = NewWithTable(Description)
     end
     Data:NewDatabase(ModInstance.Name)
     Data:SetData("Data",ModInstance,ModInstance.Name)
     return ModInstance
-end
-
-function ModSetup:CreateConfig(ModInstance:ModInstance)
-    
 end
 
 return ModSetup

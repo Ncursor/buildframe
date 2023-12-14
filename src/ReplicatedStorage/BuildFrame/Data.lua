@@ -43,4 +43,9 @@ function BFData:SetValue(Name:string,Data:any,Valuebase:string?)
 	BF.Valuebases[Valuebase or "Global"].Value = Data
 end
 
+function BFData:NewConfigbase(Name:string)
+	local Configbase = require(BF.Configbase)
+	Configbase[Name] = {}
+end
+
 return BFData
