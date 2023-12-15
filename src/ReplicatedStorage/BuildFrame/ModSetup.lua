@@ -7,7 +7,7 @@ local MetaTemplate = {
         return `{self.Name}:{self.Version}`
     end,
     __eq = function(self:ModInstance,value:ModInstance)
-        if not tostring(value) == `{self.Name}:{self.Version}` then return end
+        if tostring(value) ~= `{self.Name}:{self.Version}` then return end
         return self.Name == value.Name
     end
 }
@@ -20,7 +20,7 @@ local function NewWithTable(Name:string,mymod:ModuleScript)
     Credit = mymodinfo.credit},MetaTemplate)
     return ModInstance
 end
-function ModSetup:New(Name,Description,Credit,Version)
+function ModSetup:New(Name:string,Description:string,Credit:string,Version:string)
     local ModInstance
     if Description or Version or Credit then
     ModInstance = setmetatable({Name = Name,Description = Description,Version = Version,Credit = Credit},MetaTemplate)
