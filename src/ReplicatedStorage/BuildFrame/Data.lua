@@ -2,7 +2,10 @@ local BF = script.Parent
 local Databases = require(BF.Databases)
 local BFData = {}
 
+--[[Properties]]--
 BFData.GlobalData = Databases.Global
+
+--[[Functions]]--
 function BFData:SetData(Key:string,Data:any,Database:string?)
 	Databases[Database or "Global"][Key] = Data
 end
