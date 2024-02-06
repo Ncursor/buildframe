@@ -3,6 +3,12 @@
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Ncursor/buildframe?style=for-the-badge&label=Version)
 ![Discord](https://img.shields.io/discord/748269562759348304?style=for-the-badge&logo=discord&label=Build%20Island)
 
+## Installation Guide:
+
+1.Install `.rbxm` file from Release section
+2.Drag the file into your Roblox Studio Instance
+3.Put it **DIRECTLY** in your modkit(!not ReplicatedStorage!)
+
 A versatile Build Island modding API created by newhoachiii
 
 ## Planned features:
