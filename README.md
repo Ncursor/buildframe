@@ -5,8 +5,8 @@
 
 ## Installation Guide:
 
-1.Install `.rbxm` file from Release section
-2.Drag the file into your Roblox Studio Instance
+1.Install `.rbxm` file from Release section</br>
+2.Drag the file into your Roblox Studio Instance</br>
 3.Put it **DIRECTLY** in your modkit(!not ReplicatedStorage!)
 
 A versatile Build Island modding API created by newhoachiii
