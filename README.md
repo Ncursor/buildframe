@@ -14,6 +14,7 @@ A versatile Build Island modding API created by newhoachiii
 |Command API       |🔨|
 |Custom Permission |❌|
 |Custom Config tool|❌|
+|Displaying Data   |❌|
 
 ✔️Done(might need some finishing touches) </br>
 🔨WIP </br>
