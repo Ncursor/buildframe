@@ -6,10 +6,13 @@
 A versatile Build Island modding API created by newhoachiii
 
 ## Installation Guide:
-
-1.Install `.rbxm` file from Release section</br>
-2.Drag the file into your Roblox Studio Instance</br>
+### Github Installation:
+1.Install `.rbxm` file from Release section<br>
+2.Drag the file into your Roblox Studio Instance<br>
 3.Put it **DIRECTLY** in your modkit(!not ReplicatedStorage!)
+
+### Roblox Installation:
+1. Add the model **DIRECTLY** inside your Modkit
 
 ## Planned features:
 
@@ -17,7 +20,7 @@ A versatile Build Island modding API created by newhoachiii
 |------------------|:----------:|
 |Datastore         |✔️|
 |Mod Setup         |✔️|
-|Command API       |🔨|
+|Command API       |🔨(Halted due to official Build Island API)|
 |Custom Permission |❌|
 |Custom Config tool|❌|
 |Displaying Data   |❌|
