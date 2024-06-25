@@ -6,6 +6,7 @@
 A versatile Build Island modding API created by newhoachiii
 
 ## Installation Guide:
+**IS SUBJECTED TO CHANGE IF PLEXITY ADDS MY MOD**
 ### Github Installation:
 1.Install `.rbxm` file from Release section<br>
 2.Drag the file into your Roblox Studio Instance<br>
