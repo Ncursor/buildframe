@@ -1,6 +1,6 @@
 export type ModInstance = {Name:string,Description:string,Version:number,Credit:string}
 export type ModInstanceInfo = (self:any,Name:string,Description:string,Version:number,Credit:string)->ModInstance
-export type ModSetup = {New:ModInstanceInfo & (self:any,mymod:ModuleScript)->ModInstance}
+export type ModSetup = {New:ModInstanceInfo & (self:any,Name:string,mymod:ModuleScript)->ModInstance}
 local ModSetup:ModSetup = {}
 local MetaTemplate = {
     __tostring = function(self:ModInstance)
@@ -25,7 +25,7 @@ function ModSetup:New(Name:string,Description:string,Credit:string,Version:strin
     if Description or Version or Credit then
     ModInstance = setmetatable({Name = Name,Description = Description,Version = Version,Credit = Credit},MetaTemplate)
     else
-    ModInstance = NewWithTable(Description)
+    ModInstance = NewWithTable(Name,Description)
     end
     Data:NewDatabase(ModInstance.Name)
     Data:SetData("Data",ModInstance,ModInstance.Name)
