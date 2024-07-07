@@ -1,4 +1,8 @@
+local rs = game:GetService("ReplicatedStorage")
 local BuildFrame = {}
+if not rs:FindFirstChild("BuildFrameAPI") then
+	script.Parent = rs
+end
 BuildFrame.Commands = require(script.Commands)
 BuildFrame.ConfigBases = require(script.Configbases)
 BuildFrame.Data = require(script.Data)
